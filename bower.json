@@ -1,0 +1,24 @@
+{
+  "name": "jquery.ratio",
+  "version": "1.0.0",
+  "authors": [
+    "Morulus <vladimirmorulus@gmail.com>"
+  ],
+  "description": "Block fixed ratio",
+  "main": "jquery.ratio.js",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "jquery",
+    "plugin",
+    "ratio",
+    "block"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/morulus/jquery.ratio/",
+  "dependencies": {
+      "jquery": ">=1.7.1"
+  }
+}
