@@ -1,5 +1,4 @@
 ;(function($) {
-	var $ = $;
 	var proportionalBlock = function(wrapper, options) {
 		this.options = $.extend({
 			factor: false,// Factor determining the difference between the width and height,
