@@ -13,4 +13,4 @@ $(".block").ratio({
 factor, yShift, yShift
 
 ## Performed by
-Vladimir Kalmykov (aka [@morulus][https://github.com/morulus/]) 2014
+Vladimir Kalmykov aka [@morulus](https://github.com/morulus/) 2014
