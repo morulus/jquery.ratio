@@ -1,4 +1,10 @@
 ;(function($) {
+	var resizeTRUCKS = []; // Collectoin of resize event listners
+	$(window).resize(function(e) {
+		for (var i =0;i<resizeTRUCKS.length;i++) {
+			resizeTRUCKS[i](e);
+		}
+	});
 	var proportionalBlock = function(wrapper, options) {
 		this.options = $.extend({
 			factor: false,// Factor determining the difference between the width and height,
@@ -24,7 +30,7 @@
 		    // ^ Either "none" or url("...urlhere..")
 		    bg_url = /^url\((['"]?)(.*)\1\)$/.exec(bg_url);
 		    bg_url = bg_url ? bg_url[2] : ""; // If matched, retrieve url, otherwise ""
-		    console.log('url', bg_url);
+		    
 		    if (bg_url.length>0) {
 		    	// Upload image
 		    	var testImg = new Image();
@@ -35,8 +41,8 @@
 		    }
 		    // Make right styles
 		    $(this.wrappers.main).css("width", "100%");
-			// Binds
-			$(window).resize(function() {
+			// Catch resize
+			resizeTRUCKS.push(function() {
 				plugin.recalc();
 			});
 			plugin.recalc();
